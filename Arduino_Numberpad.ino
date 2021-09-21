@@ -29,7 +29,7 @@ void setup() {
   analogWrite(R1, 255);
   analogWrite(R2, 255);
   analogWrite(R3, 255);
-  analodWrite(R4, 255);
+  analogWrite(R4, 255);
   
 }
 
