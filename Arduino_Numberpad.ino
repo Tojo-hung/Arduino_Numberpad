@@ -16,6 +16,8 @@ int C2_data;
 int C3_data;
 int C4_data;
 
+int R = 0;
+int C = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -43,6 +45,33 @@ void loop() {
   C3_data = analogRead(C3);
   C4_data = analogRead(C4);
   
+  if(R1_data == LOW){
+    R = 1;
+  }
+  if(R2_data == LOW){
+    R = 2;
+  }
+  if(R3_data == LOW){
+    R = 3;
+  }
+  if(R4_data == LOW){
+    R = 4;
+  }
   
+  if(C1_data > 0){
+    C = 1;
+  }
+  if(C2_data > 0){
+    C = 2;
+  }
+  if(C3_data > 0){
+    C = 3;
+  }
+  if(C4_data > 0){
+    C = 4;
+  }
   
+  Serial.println("............................");
+  Serial.println("R");
+  Serial.println("C");
 }
